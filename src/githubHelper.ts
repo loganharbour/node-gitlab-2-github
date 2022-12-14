@@ -1320,8 +1320,8 @@ export class GithubHelper {
     );
 
     const web_url = new String(item.web_url)
-    const web_url_replaced = web_url.replace('gitlab', 'hpcgitlab').replace('software', 'hpc').replace('idaholab', 'ncrc-archive')
-    const attribution = `In GitLab by @${item.author.username} on ${formattedDate} ${web_url_replaced}`;
+    const web_url_replaced = web_url.replace('gitlab', 'hpcgitlab').replace('software', 'hpc').replace('idaholab', 'ncrc-archivd')
+    const attribution = `In [GitLab](${web_url_replaced}) by @${item.author.username} on ${formattedDate}`;
     const lineRef =
       item && item.position
         ? GithubHelper.createLineRef(item.position, repoLink)
