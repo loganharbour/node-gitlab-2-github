@@ -1319,7 +1319,8 @@ export class GithubHelper {
       dateformatOptions
     );
 
-    const web_url = item.web_url.replace("gitlab", "hpcgitlab").replace("software", "hpc").replace("idaholab", "ncrc-archive")
+    const web_url = item.web_url
+    const web_url_replaced = web_url.replace("gitlab", "hpcgitlab").replace("software", "hpc").replace("idaholab", "ncrc-archive")
     const attribution = `In GitLab by @${item.author.username} on ${formattedDate} ${web_url}`;
     const lineRef =
       item && item.position
