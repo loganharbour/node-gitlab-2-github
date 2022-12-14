@@ -921,7 +921,7 @@ export class GithubHelper {
       let assignees = this.convertAssignees(mergeRequest);
 
       let props: IssueImport = {
-        title: mergeRequest.title.trim() + ' [!' mergeRequest.iid + ' ' + mergeRequest.state + ']',
+        title: mergeRequest.title.trim() + ' [!' + mergeRequest.iid + ' ' + mergeRequest.state + ']',
         body: bodyConverted,
         assignee: assignees.length > 0 ? assignees[0] : undefined,
         created_at: mergeRequest.created_at,
